@@ -17,7 +17,7 @@
 // <a href="https://jsbin.com/hirunic/edit?js,console" target="_blank">Solution Set</a>
 
 //Dan's way
-//Would have been helpful to have another case, for example 3, to get to this solution
+//I wonder how I would have reached this approach without a few more examples
 function dans_sequence(number) {
   var array = [];
   var newNumber;
@@ -34,7 +34,7 @@ function dans_sequence(number) {
 
 math_sequence(5);
 
-//Juliann's complicated way that doesn't match exactly (one extra entry when 5 is used)
+//Juliann's more complicated way
 function math_sequence(number) {
   var array = [];
 
@@ -64,7 +64,7 @@ function math_sequence(number) {
 
   //case 2a: max number not reached in 18 entries 
   //case 2b: max number reached on last entry
-  if (counter === 17) {
+  if (counter === 18) {
     return array;
 
   //case 3: max number reached in case 1
