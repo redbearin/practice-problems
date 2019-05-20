@@ -34,7 +34,7 @@ function makeLabel(obj){
 }
 
 // alternate solutions:
-// OPTION 1: replace internal content of function with a template literal: `${obj.greeting} ${obj.givenName} ${obj.familyName}
+// OPTION 1: replace internal content of function with a template literal(only part of it included here): `${obj.greeting} ${obj.givenName} ${obj.familyName}
 //OPTION 2: with variables
 // function makeLabel(object) {
 //   var name = object.greeting + ' ' + object.givenName + ' ' + object.familyName;
