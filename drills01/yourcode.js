@@ -32,3 +32,13 @@ function getAllNamesShorterThan(array, number){
 function makeLabel(obj){
   return obj.greeting + ' ' + obj.givenName +' ' + obj.familyName + '\n' + obj[ 'home address' ].streetNumber + ' ' + obj[ 'home address' ].streetName + '\n' + obj[ 'home address' ].city + ', ' +  obj[ 'home address' ].state  + ' ' + obj[ 'home address' ].zip;
 }
+
+// alternate solutions:
+// OPTION 1: replace internal content of function with a template literal: `${obj.greeting} ${obj.givenName} ${obj.familyName}
+//OPTION 2: with variables
+// function makeLabel(object) {
+//   var name = object.greeting + ' ' + object.givenName + ' ' + object.familyName;
+//   var streetAddress = object['home address'].streetNumber + ' ' + object['home address'].streetName;
+//   var cityStateZip = object['home address'].city + ', ' + object['home address'].state + ' ' + object['home address'].zip; 
+//   return name + '\n' + streetAddress + '\n' + cityStateZip;
+// }
