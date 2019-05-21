@@ -10,8 +10,8 @@
 // 	- `biggerWords('whales', myArray);`
 // 	- Output - `['reptile', 'mammoth', 'turtles']`
 
-var newArray = [];
 function longerWords(string, array) {
+  var newArray = [];
   array.forEach(element => {
     if (element.length > string.length) {
       newArray.push(element);
@@ -20,5 +20,5 @@ function longerWords(string, array) {
   return newArray;
 }
 
-var myArray = ['bug', 'insect', 'mammal', 'reptile', 'mammoth', 'turtles'];
-longerWords('whales', myArray);
+var creatures = ['bug', 'insect', 'mammal', 'reptile', 'mammoth', 'turtles'];
+longerWords('whales', creatures);
