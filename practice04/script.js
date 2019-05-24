@@ -11,21 +11,26 @@
 // 	- Output - `['cat', 'dog', 'human', 'mouse']`
 //Try doing this using a **Bubble Sort**, if you are unsure what that is <a href="https://www.google.com" target="_blank">Click Here</a>
 
-function sort(arr) {
-  return arr.sort();
+animalArray = ['mouse', 'cat', 'dog', 'human', 'mammoth'];
+
+function sortWithMethods(arr) {
+  arr.sort(function(a, b) {
+    return a - b;
+  })
 }
 
-var myArray = ['mouse', 'cat', 'dog', 'human'];
-sort (myArray);
+sortWithMethods(animalArray);
 
 function bubbleSort(arr) {
-  var length = arr.length
+  //set the array length
+  var length = arr.length;
+  //while length is not falsy
   while (length) {
-    for(var i = 0; i < arr.length; i++){
-      if (arr[i]>arr[i+1]) {
-        var temp = arr[i];
-        arr[i] = arr[i+1];
-        arr[i+1] = temp;
+    for(var index = 0; index < arr.length; index++){
+      if (arr[index] > arr[index+1]) {
+        var temp = arr[index];
+        arr[index] = arr[index + 1];
+        arr[index + 1] = temp;
       }
     }
     length--;
@@ -33,5 +38,5 @@ function bubbleSort(arr) {
   return arr;
 }
 
-var mySecondArray = ['mouse', 'cat', 'dog', 'human'];
-bubbleSort(mySecondArray);
+
+bubbleSort(animalArray);
