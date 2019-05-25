@@ -8,9 +8,9 @@
 // - Example:
 // 	- `fibSequence(12);`
 // 	- Output - `0 1 1 2 3 5 8 13 21 34 55 89`
-// - If you are unfamiliar with the Fibonacci sequence <a href="https://www.google.com" target="_blank">Click Here</a>
 
 function fibSequence(number){
+  //set the initial two digits in the array
   var arr = [0, 1];
   for (var i = 1; i < number - 1; i++){
     arr[i+1] = arr[i-1] + arr[i];
