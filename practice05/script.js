@@ -9,17 +9,19 @@
 //Note: The list could also be returned in an array.
 
 function fizzBuzz(){
-  for(var i = 1; i <= 100; i++){
-    if (i % 15 === 0) {
-      console.log('FizzBuzz');
-    } else if (i%3 === 0) {
-      console.log('Fizz');
-    } else if (i % 5 === 0) {
-      console.log('Buzz')
+  fizzBuzzArray = [];
+  for(var number = 1; number <= 100; number++){
+    if (number % 15 === 0) {
+      fizzBuzzArray.push('FizzBuzz');
+    } else if (number % 3 === 0) {
+      fizzBuzzArray.push('Fizz');
+    } else if (number % 5 === 0) {
+      fizzBuzzArray.push('Buzz')
     } else {
-      console.log(i);
+      fizzBuzzArray.push(number);
     }
   }
+  return fizzBuzzArray;
 }
 
 fizzBuzz();
