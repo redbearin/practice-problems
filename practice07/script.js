@@ -19,17 +19,32 @@
 // 	- Example: 
 // 		- `"Hello there"` would be `"Ellohay heretay"`
 
+// This function handles the harder solution
 function translatePigLatin(string) {
+  //split the words into separate array items
   var wordArray = string.split(' ');
+
+  //isolate first word, first letter after Pig Latin applied
+  //make it a capital letter
+  var firstLetter = wordArray[0].slice(1,2).toUpperCase();
+
+  var newWord = '';
   var newArray = [];
+
   for (var i = 0; i < wordArray.length; i++){
-    var word = wordArray[i]
-    var firstLetter = word[0];
-    var restOfWord = word.slice(1);
-    var newWord = restOfWord + firstLetter + 'ay';
-    newArray.push(newWord.toLowerCase());
+    var word = wordArray[i];
+    //first word (first letter of new word a capital letter)
+    if (i === 0) {
+      newWord = firstLetter + word.slice(2) + word[0].toLowerCase() + 'ay';
+      newArray.push(newWord);
+      //rest of words (first word lowercase)
+    } else {
+      newWord = word.slice(1) + word[0] + 'ay';
+      newArray.push(newWord);
+    }
   }
+  //join the array words back together with a space
   return newArray.join(' ');
 }
 
-translatePigLatin('Hello joe');
+translatePigLatin('Today the grass grew');
