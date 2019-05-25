@@ -13,13 +13,11 @@
 
 function arrayReverse(array) {
   var arrayInReverse = [];
-  console.log(array.length);
   for (var i = array.length - 1; i >= 0; i--) {
-    console.log(array[i]);
     arrayInReverse.push(array[i]);
   }
   return arrayInReverse;
 }
 
-var myArray = ['hello', 45, 'Bob', 'what', '23'];
-arrayReverse(myArray);
+var mixedArray = ['hello', 45, 'Bob', 'what', '23'];
+arrayReverse(mixedArray);
