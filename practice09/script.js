@@ -11,42 +11,38 @@
 // 	- `fittingWords('cat', myArray);`
 // 	- Output - `['cat','caterpillar','accurate','cactus']`
 
-//using for loop
+//using nested for loops
 function fittingWords(string, array) {
   var letterArray = string.split('');
   var wordArray = [];
-  for (var j = 0; j < array.length; j++) {
-    var i = 0
+  for (var outer = 0; outer < array.length; outer++) {
     var counter = 0;
-    while (i < letterArray.length) {
-      if (array[j].includes(letterArray[i])){
+    for (var inner = 0; inner < array.length; inner++) {
+      if (array[outer].includes(letterArray[inner])){
         counter++;
       }
-      i++
     }
     if (counter === letterArray.length) {
-      wordArray.push(array[j]);
+      wordArray.push(array[outer]);
     }
   }
-  return wordArray;
+return wordArray;
 }
 
-var myArray = ['cat','caterpillar','whale','accurate','smile','cactus','cute'];
-fittingWords('cat', myArray);
+var firstWordArray = ['cat','caterpillar','whale','accurate','smile','cactus','cute'];
+fittingWords('cat', firstWordArray);
 
 
 //using forEach
-function fittingWords(string, array) {
+function fittingWords2(string, array) {
   var letterArray = string.split('');
   var wordArray = [];
   array.forEach(element => {
-    var i = 0
     var counter = 0;
-    while (i < letterArray.length) {
-      if (element.includes(letterArray[i])){
+    for (var index =0; index < letterArray.length; index++) {
+      if (element.includes(letterArray[index])){
         counter++;
       }
-      i++
     }
     if (counter === letterArray.length) {
       wordArray.push(element);
@@ -55,5 +51,5 @@ function fittingWords(string, array) {
   return wordArray;
 }
 
-var myArray = ['cat','caterpillar','whale','accurate','smile','cactus','cute'];
-fittingWords('cat', myArray);
+var secondWordArray = ['went','wheel','whale','flew','green','cactus','grew'];
+fittingWords2('we', secondWordArray);
