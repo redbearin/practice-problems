@@ -19,11 +19,19 @@
 // console.log(randomize_list(input_array)); //outputs 
 // <pre>[1,3,5,2,5]</pre>
 
-function randomize_list(array) {
-  var newArray = [];
-  for (var i = array.length; i <= 0; i--) {
-    var indexToTake = Math.random() * (i - 0) + 0;
-    newArray.push(array.slice(i,1));
+//using a function
+function arrayShuffle(input) {
+  for (var i = input.length-1; i >=0; i--) {
+   
+      var randomIndex = Math.floor(Math.random()*(i+1)); 
+      var itemAtIndex = input[randomIndex]; 
+       
+      input[randomIndex] = input[i]; 
+      input[i] = itemAtIndex;
   }
+  return input;
 }
-randomize_list([3,1,5,5,2]);
+
+var incomingArray = [ 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ];
+
+arrayShuffle(incomingArray);
