@@ -1,3 +1,5 @@
+//set up to work with a variety of inputs
+
 function factor_of_sequence(num) {
   var outputArray = [];
   var length = (num + 1) * 3 + 1;
