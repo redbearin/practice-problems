@@ -1,3 +1,12 @@
+function countOccurences(array, word){
+  var counter = 0;
+  array.forEach(element => {
+    if (element === word) {
+      counter++;
+    }
+  })
+  return counter;
+}
 
 //COUNT OCCURANCES 
 // - given an array of words and a separate word, count how many times a particular word given occurs within that array for example:
@@ -98,11 +107,56 @@ function findMode(array){
   }
   //return the number with the highest count
   return holdNumber;
+=======
+function wordLengths(array){
+  var lengthArray = [];
+  array.forEach(element => {
+    lengthArray.push(element.length)
+  })
+  return lengthArray;
+}
+
+function getMinMaxMean(array){
+  var numberDetails = {};
+  var sum = 0;
+  array.forEach(element => {
+    sum += element;
+  })
+
+  var mean =(sum/array.length);
+
+  var sortedArray = array.sort((a, b) => a - b);
+
+  numberDetails.min = sortedArray.shift();
+  numberDetails.max = sortedArray.pop();
+  numberDetails.mean = mean;
+  return numberDetails;
+}
+
+function findMode(array){
+  var modeObj = {};
+  //intialize the first element to max
+  var maxElement = array[0];
+  var maxCount = 1;
+  for(var i = 0; i < array.length; i++){
+    var element = array[i];
+    if(modeObj[element] == null) {
+      modeObj[element] = 1;
+    }
+    else {
+      modeObj[element]++;
+    }
+    if(modeObj[element] >= maxCount){
+      maxElement = element;
+      maxCount = modeObj[element];
+    }
+  }
+  return maxElement;
 }
 
 findMode([5,2,7,18,2,42,5,2]);
 
-//a much more direct way to solve the problem.
+//A more direct way to solve the problem.
 //Courtesy of Dan Pascal.
 // 'use strict';
 
