@@ -1,3 +1,4 @@
+
 function longestCommonString(str1, str2) {
   var commonString = '';
   for(var str1Index = 0; str1Index < str1.length; str1Index++){
@@ -14,3 +15,7 @@ function longestCommonString(str1, str2) {
 var str1 = 'abcdefg';
 var str2 = 'abc';
 longestCommonString(str1, str2);
+
+var str3 = 'abdefghij';
+var str4 = 'abefgh'; 
+longestCommonString(str3, str4);
